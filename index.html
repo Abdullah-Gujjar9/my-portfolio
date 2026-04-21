@@ -3,561 +3,2027 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Muhammad Abdullah Sultan, portfolio, Computer Engineer, Machine Learning, Networking, Embedded Systems" />
-  <meta name="description" content="Portfolio of Muhammad Abdullah Sultan - Computer Engineer | Networking & Machine Learning Specialist" />
-  <link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/x-jpg" />
-  <title>Portfolio | Muhammad Abdullah Sultan</title>
-
-  <!-- CDN for React, ReactDOM, and Babel -->
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.9/babel.min.js"></script>
-
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
-
-  <!-- AOS for Scroll Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Typed.js for Typewriter Effect -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+  <title>AI Automation Expert | Workflow Systems, CRM Automation, OpenAI Integrations</title>
+  <meta
+    name="description"
+    content="AI automation expert helping businesses streamline operations with n8n, Zapier, Make.com, OpenAI, CRM automation, APIs, webhooks, and custom workflow systems."
+  />
+  <meta
+    name="keywords"
+    content="AI automation expert, n8n specialist, Zapier automation, Make.com workflows, OpenAI integration, CRM automation, API integration, webhook automation, AI agents, business workflow consultant"
+  />
+  <meta name="theme-color" content="#f3f8ff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2307111f'/%3E%3Cpath d='M18 46l11-28h6l11 28h-6l-2.5-6.7h-11L24 46h-6zm11.3-12h7.4L33 24.8 29.3 34z' fill='%2362b1ff'/%3E%3C/svg%3E"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
-    /* Custom Tailwind Configurations */
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    :root {
+      --bg: #f3f8ff;
+      --bg-soft: #e8f1ff;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-strong: #ffffff;
+      --panel-soft: rgba(28, 123, 255, 0.08);
+      --line: rgba(28, 123, 255, 0.14);
+      --line-strong: rgba(28, 123, 255, 0.24);
+      --text: #10233f;
+      --muted: #5f7798;
+      --muted-strong: #385277;
+      --primary: #3d8dff;
+      --primary-strong: #1c7bff;
+      --accent: #2f6de1;
+      --accent-soft: rgba(61, 141, 255, 0.12);
+      --warm: #ffc96b;
+      --success: #12866a;
+      --danger: #cc4b4b;
+      --shadow: 0 24px 48px rgba(38, 92, 171, 0.12);
+      --radius-xl: 12px;
+      --radius-lg: 12px;
+      --radius-md: 12px;
+      --radius-sm: 12px;
+      --container: min(1180px, calc(100% - 2rem));
     }
-    .float {
-      animation: float 6s ease-in-out infinite;
+
+    * {
+      box-sizing: border-box;
     }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0); }
-    }
-    /* Smooth Scroll Behavior */
+
     html {
       scroll-behavior: smooth;
     }
-    /* Dark Mode Styles */
-    .dark .glass {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(61, 141, 255, 0.16), transparent 28rem),
+        radial-gradient(circle at top left, rgba(169, 210, 255, 0.34), transparent 22rem),
+        linear-gradient(180deg, #f7fbff 0%, #edf5ff 42%, #e8f1ff 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    .dark .btn-primary {
-      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(61, 141, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(61, 141, 255, 0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: 0.15;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
     }
-    .dark .btn-secondary {
-      border-color: #3b82f6;
-      color: #93c5fd;
+
+    img {
+      max-width: 100%;
+      display: block;
     }
-    .dark .btn-secondary:hover {
-      background: rgba(59, 130, 246, 0.1);
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .dark .social-icon {
-      color: #93c5fd;
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
     }
-    .dark .social-icon:hover {
-      background: #1e3a8a;
+
+    button {
+      cursor: pointer;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 1rem;
+      background: var(--text);
+      color: var(--bg);
+      padding: 0.7rem 1rem;
+      border-radius: var(--radius-sm);
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      background: rgba(247, 251, 255, 0.84);
+      border-bottom: 1px solid rgba(28, 123, 255, 0.12);
+    }
+
+    .nav-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      min-height: 5.4rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(28, 123, 255, 0.12);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 34px rgba(28, 123, 255, 0.28);
+      flex-shrink: 0;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+      min-width: 0;
+    }
+
+    .brand-copy strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-copy span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .site-nav a {
+      color: var(--muted-strong);
+      font-size: 0.95rem;
+      transition: color 0.25s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      padding: 0.82rem 1.1rem;
+      border: 1px solid rgba(28, 123, 255, 0.18);
+      border-radius: 12px;
+      background: rgba(61, 141, 255, 0.1);
+      color: var(--primary-strong) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--text);
+    }
+
+    main section[id] {
+      scroll-margin-top: 6.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .section-head {
+      max-width: 48rem;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.42rem 0.82rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--accent);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: var(--radius-sm);
+      background: currentColor;
+      box-shadow: 0 0 18px currentColor;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 3.35rem);
+      line-height: 1.04;
+      max-width: 14.5ch;
+      margin-top: 0.8rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-top: 1rem;
+    }
+
+    h3 {
+      font-size: 1.28rem;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted-strong);
+    }
+
+    .lede {
+      font-size: 1rem;
+      max-width: 44rem;
+      color: var(--muted-strong);
+    }
+
+    .hero {
+      padding: 2.4rem 0 1.6rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(240px, 0.62fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .hero-copy {
+      max-width: 48rem;
+    }
+
+    .hero-copy p {
+      max-width: 46rem;
+    }
+
+    .hero-visual {
+      justify-self: end;
+      width: min(100%, 19rem);
+      margin-top: 0.15rem;
+    }
+
+    .hero-portrait-card {
+      padding: 0.85rem;
+    }
+
+    .hero-portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    .hero-portrait-copy {
+      margin-top: 0.7rem;
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .hero-portrait-copy strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .hero-portrait-copy span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .accent-text {
+      background: linear-gradient(135deg, var(--primary-strong), #79b5ff 48%, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .cta-row,
+    .icon-links,
+    .tool-chip-cloud,
+    .case-tools,
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .cta-row {
+      margin-top: 1.35rem;
+      gap: 0.7rem;
+    }
+
+    .icon-links {
+      margin-top: 0.95rem;
+      gap: 0.8rem;
+    }
+
+    .icon-link {
+      width: 2.85rem;
+      height: 2.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid rgba(28, 123, 255, 0.12);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--muted);
+      font-size: 1rem;
+      transition: color 0.25s ease;
+    }
+
+    .icon-link:hover,
+    .icon-link:focus-visible {
+      color: var(--primary-strong);
+      border-color: rgba(28, 123, 255, 0.2);
+      background: rgba(61, 141, 255, 0.08);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.82rem 1.12rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #5ca4ff, var(--primary-strong) 56%, #185fd1);
       color: #ffffff;
+      box-shadow: 0 18px 34px rgba(28, 123, 255, 0.22);
     }
-    body.dark {
-      background-color: #000 !important;
+
+    .btn-secondary {
+      border-color: rgba(28, 123, 255, 0.18);
+      background: rgba(61, 141, 255, 0.08);
+      color: var(--text);
     }
-    /* Sections and boxes in dark mode */
-    .dark .glass,
-    .dark .bg-white,
-    .dark .dark\:bg-gray-900,
-    .dark .rounded-lg {
-      background-color: #23272f !important; /* dark grey */
-      border-color: rgba(255,255,255,0.08);
+
+    .btn-ghost {
+      border-color: rgba(28, 123, 255, 0.16);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--muted-strong);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.38rem 0.72rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(28, 123, 255, 0.12);
+      background: rgba(255, 255, 255, 0.84);
+      color: var(--muted-strong);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .chip strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 249, 255, 0.94)),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.5), transparent 34%, transparent 70%, rgba(61, 141, 255, 0.08));
+      pointer-events: none;
+    }
+
+    .card-body {
+      position: relative;
+      z-index: 1;
+      padding: 1.5rem;
+    }
+
+    .trust-strip {
+      padding: 1rem 0 0;
+    }
+
+    .trust-band {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.9rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .trust-band li {
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+      text-align: center;
+      color: var(--muted-strong);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+      gap: 1.4rem;
+    }
+
+    .about-story {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .split-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .point-card {
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .point-card strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1rem;
+    }
+
+    .point-card p {
+      font-size: 0.95rem;
+    }
+
+    .about-visuals {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      padding: 0.95rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .check-list i {
+      color: var(--accent);
+      margin-top: 0.15rem;
+    }
+
+    .grid-3,
+    .grid-2,
+    .testimonial-grid,
+    .offer-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2,
+    .testimonial-grid,
+    .offer-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card,
+    .trust-card,
+    .process-card,
+    .testimonial-card,
+    .offer-card,
+    .case-card,
+    .tool-group {
+      height: 100%;
+      transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+    }
+
+    .service-card:hover,
+    .trust-card:hover,
+    .process-card:hover,
+    .testimonial-card:hover,
+    .offer-card:hover,
+    .case-card:hover,
+    .tool-group:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      box-shadow: 0 28px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    .icon-box {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+      border-radius: 0.8rem;
+      background: linear-gradient(135deg, rgba(61, 141, 255, 0.12), rgba(120, 176, 255, 0.2));
+      color: var(--primary-strong);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-subtitle {
+      margin-top: 0.65rem;
+      font-size: 0.97rem;
+    }
+
+    .tool-groups {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .tool-group .card-body {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .group-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .group-label i {
+      color: var(--primary);
+    }
+
+    .tool-chip-cloud {
+      gap: 0.65rem;
+    }
+
+    .tool-chip {
+      padding: 0.5rem 0.78rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--muted-strong);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .case-card .card-body {
+      display: grid;
+      gap: 1rem;
+      height: 100%;
+    }
+
+    .case-visual {
+      min-height: 12.25rem;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(28, 123, 255, 0.22);
+      background:
+        radial-gradient(circle at top right, rgba(61, 141, 255, 0.18), transparent 11rem),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(235, 244, 255, 0.75));
+      padding: 1rem;
+      display: flex;
+      align-items: flex-end;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .case-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--accent);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .case-category::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: var(--radius-sm);
+      background: currentColor;
+    }
+
+    .case-tools {
+      gap: 0.55rem;
+    }
+
+    .case-outcome {
+      color: var(--muted-strong);
+      font-size: 0.96rem;
+    }
+
+    .case-outcome strong {
+      color: var(--text);
+    }
+
+    .inline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 800;
+      margin-top: auto;
+    }
+
+    .trust-grid,
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .process-card .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--radius-sm);
+      background: rgba(61, 141, 255, 0.12);
+      color: var(--primary);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .process-card:nth-child(4),
+    .process-card:nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .testimonial-card blockquote {
+      margin: 0;
+      color: var(--text);
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+
+    .testimonial-meta {
+      margin-top: 1.4rem;
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .testimonial-meta strong {
+      font-size: 0.98rem;
+    }
+
+    .testimonial-meta span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .offer-card.featured {
+      border-color: rgba(28, 123, 255, 0.22);
+      background:
+        radial-gradient(circle at top right, rgba(61, 141, 255, 0.12), transparent 14rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(236, 245, 255, 0.94));
+    }
+
+    .offer-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: rgba(61, 141, 255, 0.1);
+      color: var(--primary-strong);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .price-line {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18rem;
+      margin: 1rem 0 1.1rem;
+    }
+
+    .price-line strong {
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .price-line span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .offer-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.4rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .offer-points li {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      color: var(--muted-strong);
+    }
+
+    .offer-points i {
+      color: var(--accent);
+      margin-top: 0.2rem;
+    }
+
+    .contact-layout {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact-copy .lede {
+      max-width: 38rem;
+    }
+
+    .contact-links {
+      margin-top: 1.5rem;
+    }
+
+    .contact-links .icon-link {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .field label {
+      color: var(--muted-strong);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid rgba(28, 123, 255, 0.14);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--text);
+      padding: 0.95rem 1rem;
+      outline: none;
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .field textarea {
+      min-height: 11rem;
+      resize: vertical;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #7290b3;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: rgba(28, 123, 255, 0.3);
+      box-shadow: 0 0 0 4px rgba(61, 141, 255, 0.08);
+      background: #ffffff;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 18rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.78rem 0.95rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      border: 1px solid rgba(28, 123, 255, 0.1);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--muted-strong);
+    }
+
+    .status[data-state="success"] {
+      background: rgba(125, 255, 216, 0.12);
+      border-color: rgba(125, 255, 216, 0.2);
+      color: var(--success);
+    }
+
+    .status[data-state="error"] {
+      background: rgba(255, 154, 154, 0.12);
+      border-color: rgba(255, 154, 154, 0.2);
+      color: var(--danger);
+    }
+
+    .site-footer {
+      padding: 2.5rem 0 3rem;
+      border-top: 1px solid rgba(28, 123, 255, 0.12);
+      color: var(--muted);
+    }
+
+    .footer-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--text);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .tool-groups,
+      .grid-3,
+      .trust-grid,
+      .process-grid,
+      .offer-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 920px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 1rem;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4rem;
+        padding: 0.85rem;
+        border-radius: 12px;
+        border: 1px solid rgba(28, 123, 255, 0.12);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      .site-nav.is-open {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 0.8rem 0.95rem;
+        border-radius: 12px;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        background: rgba(61, 141, 255, 0.08);
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        justify-self: start;
+        width: min(100%, 24rem);
+      }
+
+      .trust-band {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .tool-groups,
+      .case-grid,
+      .grid-3,
+      .trust-grid,
+      .process-grid,
+      .offer-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row,
+      .split-points {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section,
+      .hero {
+        padding: 4rem 0;
+      }
+
+      .container {
+        width: min(100% - 1.2rem, 1180px);
+      }
+
+      .nav-shell {
+        min-height: 4.8rem;
+      }
+
+      .brand-copy strong {
+        font-size: 0.9rem;
+      }
+
+      .brand-copy span {
+        font-size: 0.76rem;
+      }
+
+      .trust-band {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-row .btn,
+      .form-footer .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .form-footer {
+        align-items: stretch;
+      }
+
+      .footer-shell {
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen font-sans">
-  <div id="root"></div>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <script type="text/babel">
-    const { useState, useEffect } = React;
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <span class="brand-mark">
+          <img src="./assets/images/myphoto.jpg" alt="Portrait of Muhammad Abdullah Sultan" loading="eager" />
+        </span>
+        <span class="brand-copy">
+          <strong>Muhammad Abdullah Sultan</strong>
+          <span>AI Automation Expert</span>
+        </span>
+      </a>
 
-    // Navigation Component
-    const Navbar = () => {
-      const [isOpen, setIsOpen] = useState(false);
-      const [darkMode, setDarkMode] = useState(false);
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
 
-      useEffect(() => {
-        if (darkMode) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      }, [darkMode]);
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact" class="nav-cta">Book a Call</a>
+      </nav>
+    </div>
+  </header>
 
-      const toggleMenu = () => setIsOpen(!isOpen);
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow">AI Automation Consultant</span>
+          <h1>I build <span class="accent-text">AI-powered automation systems</span> that save time and scale operations.</h1>
+          <p class="lede">
+            I help businesses automate repetitive work, connect the tools they already use, and build reliable AI-assisted workflows using n8n, Zapier, Make.com, OpenAI, CRMs, APIs, webhooks, and lightweight custom scripting.
+          </p>
 
-      const handleDarkModeToggle = () => {
-        setDarkMode(!darkMode);
-        // Redirect to home section
-        setTimeout(() => {
-          document.querySelector('#home').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      };
-
-      const navLinks = [
-        { href: "#home", label: "Home" },
-        { href: "#about", label: "About" },
-        { href: "#skills", label: "Skills" },
-        { href: "#education", label: "Education" },
-        { href: "#projects", label: "Projects" },
-        { href: "#experience", label: "Experience" },
-        { href: "#contact", label: "Contact" },
-      ];
-
-      const handleNavClick = (e, href) => {
-        e.preventDefault();
-        document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setIsOpen(false);
-      };
-
-      return (
-        <header className="sticky top-0 z-50 glass">
-          <div className="max-w-6xl mx-auto px-  4 py-4 flex justify-between items-center">
-            <a href="#home" className="flex items-center gap-2 text-blue-600 dark:text-blue-300 font-bold">
-              <span className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-800 dark:to-blue-600 text-white rounded-lg flex items-center justify-center font-extrabold">MAS</span>
-              <div>
-                <div className="text-sm">Muhammad Abdullah Sultan</div>
-                <div className="text-xs text-gray-600 dark:text-gray-300">Computer Engineer</div>
-              </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">
+              <i class="fas fa-calendar-check"></i>
+              Book a Call
             </a>
-            <nav className="hidden md:flex gap-4 items-center">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-300 px-2 py-1 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition-all"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button
-                onClick={handleDarkModeToggle}
-                className="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-gray-700"
-              >
-                <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'} text-blue-600 dark:text-blue-300`}></i>
-              </button>
-            </nav>
-            <button className="md:hidden p-2" onClick={toggleMenu}>
-              <i className="fas fa-bars text-blue-600 dark:text-blue-300"></i>
-            </button>
+            <a class="btn btn-secondary" href="#case-studies">
+              <i class="fas fa-layer-group"></i>
+              View Projects
+            </a>
+            <a class="btn btn-ghost" href="mailto:abdullah.s1045g@gmail.com?subject=Let%27s%20Automate%20Your%20Business">
+              <i class="fas fa-bolt"></i>
+              Let's Automate Your Business
+            </a>
           </div>
-          {isOpen && (
-            <div className="md:hidden bg-white dark:bg-gray-900 px-4 py-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-300"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button
-                onClick={handleDarkModeToggle}
-                className="block py-2 text-blue-600 dark:text-blue-300"
-              >
-                {darkMode ? 'Light Mode' : 'Dark Mode'}
-              </button>
-            </div>
-          )}
-        </header>
-      );
-    };
 
-    // Hero Component
-    const Hero = () => {
-      useEffect(() => {
-        const typed = new Typed('#typed', {
-          strings: ['Machine Learning', 'Network Security', 'Embedded Systems', 'Full-stack Development'],
-          typeSpeed: 90,
-          backSpeed: 40,
-          loop: true,
+          <div class="icon-links" aria-label="Direct contact links">
+            <a class="icon-link" href="mailto:abdullah.s1045g@gmail.com" aria-label="Email Abdullah">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              class="icon-link"
+              href="https://www.linkedin.com/in/mabdullah-sultan"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              class="icon-link"
+              href="https://github.com/Abdullah-Gujjar9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-visual" data-reveal aria-label="Portrait of Muhammad Abdullah Sultan">
+          <article class="card hero-portrait-card">
+            <div class="card-body">
+              <img
+                class="hero-portrait"
+                src="./assets/images/myphoto.jpg"
+                alt="Portrait of Muhammad Abdullah Sultan"
+                loading="eager"
+              />
+              <div class="hero-portrait-copy">
+                <strong>Muhammad Abdullah Sultan</strong>
+                <span>AI Automation Expert</span>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container">
+        <ul class="trust-band" data-reveal>
+          <li>Workflow Automation</li>
+          <li>CRM Automation</li>
+          <li>OpenAI Integrations</li>
+          <li>API and Webhooks</li>
+          <li>AI Agents</li>
+          <li>Lead Generation Automation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">About</span>
+          <h2>Automation systems built around real business workflows</h2>
+          <p class="lede">
+            I work with businesses that want fewer manual handoffs, cleaner operations, and more reliable workflows across the tools they already use.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story" data-reveal>
+            <article class="card">
+              <div class="card-body">
+                <p>
+                  My focus is straightforward: remove repetitive work, reduce errors, and give teams systems they can actually rely on. That means mapping the workflow first, choosing the right automation layer, and then building something maintainable.
+                </p>
+                <p style="margin-top: 1rem;">
+                  I combine no-code tools with custom Python or JavaScript logic when the workflow needs more control. The result is a cleaner system for connecting apps, CRMs, forms, messaging tools, spreadsheets, and AI-powered actions without unnecessary complexity.
+                </p>
+
+                <div class="split-points" style="margin-top: 1.5rem;">
+                  <div class="point-card">
+                    <strong>Business-first approach</strong>
+                    <p>Every automation is designed around time savings, smoother handoffs, and operational clarity.</p>
+                  </div>
+                  <div class="point-card">
+                    <strong>No-code plus code</strong>
+                    <p>Use the speed of no-code tools with custom logic only where it improves reliability.</p>
+                  </div>
+                  <div class="point-card">
+                    <strong>Connected systems</strong>
+                    <p>Bring together CRMs, forms, inboxes, spreadsheets, APIs, and AI services in one flow.</p>
+                  </div>
+                  <div class="point-card">
+                    <strong>Built for operations</strong>
+                    <p>Automations are documented, tested, and shaped for day-to-day business use.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="about-visuals" data-reveal>
+            <article class="card">
+              <div class="card-body">
+                <h3>What clients usually need help with</h3>
+                <ul class="check-list" style="margin-top: 1rem;">
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>Lead capture, qualification, and routing into CRM pipelines.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>AI-assisted support, intake, classification, and response workflows.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cross-tool automations for onboarding, reporting, notifications, and task creation.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>API and webhook integrations when native app connectors are not enough.</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Services</span>
+          <h2>Automation services designed for sales, operations, and client workflows</h2>
+          <p class="lede">
+            Whether you need a single high-impact automation or a more complete AI-enabled system, the goal is the same: make work move faster with fewer manual steps.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-gears"></i></div>
+              <h3>Workflow Automation</h3>
+              <p class="card-subtitle">Design multi-step workflows that move data, trigger actions, and keep operations running without manual copying, follow-ups, or status checks.</p>
+            </div>
+          </article>
+
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-brain"></i></div>
+              <h3>AI Automation and Agents</h3>
+              <p class="card-subtitle">Add ChatGPT and OpenAI-powered steps for intake, classification, drafting, knowledge retrieval, and agent-style business workflows.</p>
+            </div>
+          </article>
+
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+              <h3>CRM Automation</h3>
+              <p class="card-subtitle">Keep pipelines clean with lead routing, lifecycle updates, follow-up triggers, reminders, and handoff logic across CRM stages.</p>
+            </div>
+          </article>
+
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-plug"></i></div>
+              <h3>API Integration and Webhooks</h3>
+              <p class="card-subtitle">Connect tools directly with secure webhooks and API calls when native integrations are limited, unreliable, or not flexible enough.</p>
+            </div>
+          </article>
+
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-bullseye"></i></div>
+              <h3>Lead Generation Automation</h3>
+              <p class="card-subtitle">Capture, enrich, qualify, and route leads from forms, landing pages, outbound systems, and ad workflows into the right process.</p>
+            </div>
+          </article>
+
+          <article class="card service-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-code"></i></div>
+              <h3>Custom Logic with Python and JavaScript</h3>
+              <p class="card-subtitle">Use lightweight scripting for data transformation, validation, branching, retries, and edge cases that no-code tools cannot handle cleanly alone.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Tech Stack</span>
+          <h2>The platforms and tools behind scalable automations</h2>
+          <p class="lede">
+            I use the right stack for the workflow: fast no-code execution when it fits, direct integrations and custom logic when the process needs more control.
+          </p>
+        </div>
+
+        <div class="tool-groups">
+          <article class="card tool-group" data-reveal>
+            <div class="card-body">
+              <div class="group-label"><i class="fas fa-sitemap"></i> Automation Platforms</div>
+              <div class="tool-chip-cloud">
+                <span class="tool-chip">n8n</span>
+                <span class="tool-chip">Zapier</span>
+                <span class="tool-chip">Make.com</span>
+                <span class="tool-chip">Airtable</span>
+                <span class="tool-chip">Google Sheets</span>
+                <span class="tool-chip">Notion</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card tool-group" data-reveal>
+            <div class="card-body">
+              <div class="group-label"><i class="fas fa-wand-magic-sparkles"></i> AI and LLM Workflows</div>
+              <div class="tool-chip-cloud">
+                <span class="tool-chip">OpenAI API</span>
+                <span class="tool-chip">ChatGPT</span>
+                <span class="tool-chip">AI agents</span>
+                <span class="tool-chip">Prompt workflows</span>
+                <span class="tool-chip">Knowledge routing</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card tool-group" data-reveal>
+            <div class="card-body">
+              <div class="group-label"><i class="fas fa-address-book"></i> CRM and Business Ops</div>
+              <div class="tool-chip-cloud">
+                <span class="tool-chip">HubSpot</span>
+                <span class="tool-chip">GoHighLevel</span>
+                <span class="tool-chip">Salesforce</span>
+                <span class="tool-chip">Pipedrive</span>
+                <span class="tool-chip">Slack</span>
+                <span class="tool-chip">Email workflows</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card tool-group" data-reveal>
+            <div class="card-body">
+              <div class="group-label"><i class="fas fa-terminal"></i> APIs, Data, and Logic</div>
+              <div class="tool-chip-cloud">
+                <span class="tool-chip">APIs</span>
+                <span class="tool-chip">Webhooks</span>
+                <span class="tool-chip">Python</span>
+                <span class="tool-chip">JavaScript</span>
+                <span class="tool-chip">JSON</span>
+                <span class="tool-chip">Data mapping</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Case Studies</span>
+          <h2>Project layouts inspired by real client automation work</h2>
+          <p class="lede">
+            These showcase the types of systems I build for businesses. Real screenshots, diagrams, and metrics can be inserted later where placeholders are noted.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add workflow screenshot or operations dashboard visual.</div>
+              <span class="case-category">Operations Automation</span>
+              <h3>AI Workflow Automation for Operations</h3>
+              <p>Built a central workflow to collect requests, classify urgency with AI, create tasks, and notify the right team channel without manual triage.</p>
+              <div class="case-tools">
+                <span class="chip">n8n</span>
+                <span class="chip">OpenAI API</span>
+                <span class="chip">Slack</span>
+                <span class="chip">Notion</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Less manual sorting, faster handoffs, and more consistent operational execution.</p>
+              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add CRM pipeline screenshot and lead flow diagram.</div>
+              <span class="case-category">CRM Automation</span>
+              <h3>CRM Pipeline and Lead Follow-Up Automation</h3>
+              <p>Created lead capture, assignment, follow-up reminders, and pipeline stage updates so sales teams could respond faster and keep deals moving.</p>
+              <div class="case-tools">
+                <span class="chip">HubSpot</span>
+                <span class="chip">Zapier</span>
+                <span class="chip">Gmail</span>
+                <span class="chip">Google Sheets</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Cleaner pipeline visibility and fewer missed leads due to delayed manual follow-up.</p>
+              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add AI support workflow screenshot or conversation flow.</div>
+              <span class="case-category">AI Support Workflow</span>
+              <h3>OpenAI-Powered Customer Support Workflow</h3>
+              <p>Used AI to classify messages, draft first-response suggestions, and route complex issues into the right queue with context already attached.</p>
+              <div class="case-tools">
+                <span class="chip">Make.com</span>
+                <span class="chip">OpenAI API</span>
+                <span class="chip">Slack</span>
+                <span class="chip">Google Sheets</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Faster internal response handling and better consistency for repetitive support requests.</p>
+              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add outreach dashboard, sequence, or qualification logic visual.</div>
+              <span class="case-category">Sales Automation</span>
+              <h3>Sales Outreach and Lead Qualification System</h3>
+              <p>Connected inbound and outbound lead sources with qualification logic, enrichment steps, and routing rules for a cleaner sales handoff.</p>
+              <div class="case-tools">
+                <span class="chip">Pipedrive</span>
+                <span class="chip">Zapier</span>
+                <span class="chip">OpenAI API</span>
+                <span class="chip">Webhooks</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Less manual qualification work and faster response time on higher-intent leads.</p>
+              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add system map or API request flow screenshot.</div>
+              <span class="case-category">API Integration</span>
+              <h3>API and Webhook Integration Dashboard</h3>
+              <p>Connected tools that did not natively integrate by building webhook triggers, JSON mapping, and custom error-handling steps for stable data movement.</p>
+              <div class="case-tools">
+                <span class="chip">APIs</span>
+                <span class="chip">Webhooks</span>
+                <span class="chip">Python</span>
+                <span class="chip">JSON</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Reliable cross-tool sync and fewer manual data fixes across disconnected systems.</p>
+              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="card case-card" data-reveal>
+            <div class="card-body">
+              <div class="case-visual">Placeholder: add intake flow, AI voice agent, or call summary visual.</div>
+              <span class="case-category">Smart Intake</span>
+              <h3>AI Voice Agent and Smart Intake Workflow</h3>
+              <p>Designed an intake flow that captures inquiries, structures notes, enriches the submission, and pushes clean data into the next step automatically.</p>
+              <div class="case-tools">
+                <span class="chip">OpenAI API</span>
+                <span class="chip">Make.com</span>
+                <span class="chip">CRM</span>
+                <span class="chip">Webhooks</span>
+              </div>
+              <p class="case-outcome"><strong>Business outcome:</strong> Faster intake processing, cleaner records, and less administrative effort after each inquiry.</p>
+              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-choose-me">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Why Choose Me</span>
+          <h2>A practical automation partner for business workflows</h2>
+          <p class="lede">
+            The work is not just about connecting tools. It is about building automation that is clear, maintainable, and worth relying on when your business grows.
+          </p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+              <h3>Clean, scalable automation architecture</h3>
+              <p class="card-subtitle">Systems are organized for clarity, growth, and easier future updates instead of quick fixes that become fragile later.</p>
+            </div>
+          </article>
+
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-code-branch"></i></div>
+              <h3>No-code plus custom scripting flexibility</h3>
+              <p class="card-subtitle">Use platforms like n8n, Zapier, and Make with Python or JavaScript when the workflow needs better control.</p>
+            </div>
+          </article>
+
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-comments"></i></div>
+              <h3>Fast communication</h3>
+              <p class="card-subtitle">Clear updates, practical recommendations, and direct collaboration throughout the build.</p>
+            </div>
+          </article>
+
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+              <h3>Business-focused solutions</h3>
+              <p class="card-subtitle">Every automation is tied to a business workflow, operational bottleneck, or revenue-related process.</p>
+            </div>
+          </article>
+
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
+              <h3>Reliable long-term support</h3>
+              <p class="card-subtitle">Support can include optimization, cleanup, iteration, and adjustments as your process changes.</p>
+            </div>
+          </article>
+
+          <article class="card trust-card" data-reveal>
+            <div class="card-body">
+              <div class="icon-box"><i class="fas fa-clock"></i></div>
+              <h3>Systems designed to save time</h3>
+              <p class="card-subtitle">Reduce manual work, improve response speed, and create more predictable workflows across teams and tools.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Process</span>
+          <h2>A simple process for turning workflow problems into working systems</h2>
+          <p class="lede">
+            The build stays focused on clarity: understand the workflow, map the system, implement carefully, test thoroughly, then support adoption.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="card process-card" data-reveal>
+            <div class="card-body">
+              <span class="step-number">01</span>
+              <h3>Discovery and Workflow Review</h3>
+              <p class="card-subtitle">Review the current process, tools, bottlenecks, and manual work that should be removed or improved.</p>
+            </div>
+          </article>
+
+          <article class="card process-card" data-reveal>
+            <div class="card-body">
+              <span class="step-number">02</span>
+              <h3>Automation Planning</h3>
+              <p class="card-subtitle">Map triggers, actions, logic, edge cases, integrations, and the right execution layer for the workflow.</p>
+            </div>
+          </article>
+
+          <article class="card process-card" data-reveal>
+            <div class="card-body">
+              <span class="step-number">03</span>
+              <h3>Build and Integration</h3>
+              <p class="card-subtitle">Implement the system in n8n, Zapier, Make, CRM tools, APIs, and custom scripts where needed.</p>
+            </div>
+          </article>
+
+          <article class="card process-card" data-reveal>
+            <div class="card-body">
+              <span class="step-number">04</span>
+              <h3>Testing and Optimization</h3>
+              <p class="card-subtitle">Validate data flow, handling, logic branches, and fail states before the workflow is handed off.</p>
+            </div>
+          </article>
+
+          <article class="card process-card" data-reveal>
+            <div class="card-body">
+              <span class="step-number">05</span>
+              <h3>Delivery and Support</h3>
+              <p class="card-subtitle">Provide a stable launch path, updates, documentation notes, and support for future improvements.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Testimonials</span>
+          <h2>Built to showcase real client feedback when available</h2>
+          <p class="lede">
+            This section is ready for Upwork reviews, direct client endorsements, or agency partner feedback once you have final approved quotes.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="card testimonial-card" data-reveal>
+            <div class="card-body">
+              <blockquote>[Replace with real client testimonial]</blockquote>
+              <div class="testimonial-meta">
+                <strong>Client Name Placeholder</strong>
+                <span>Company / role / project type</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial-card" data-reveal>
+            <div class="card-body">
+              <blockquote>[Replace with real client testimonial]</blockquote>
+              <div class="testimonial-meta">
+                <strong>Client Name Placeholder</strong>
+                <span>Business process automation project</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial-card" data-reveal>
+            <div class="card-body">
+              <blockquote>[Replace with real client testimonial]</blockquote>
+              <div class="testimonial-meta">
+                <strong>Client Name Placeholder</strong>
+                <span>CRM automation or AI integration engagement</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="offers">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Project Catalog</span>
+          <h2>Conversion-focused offers inspired by service listings and project catalog pages</h2>
+          <p class="lede">
+            These can be linked from outreach, Upwork, or your social profiles and later updated with exact pricing, delivery windows, and scope limits.
+          </p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="card offer-card" data-reveal>
+            <div class="card-body">
+              <span class="offer-tag">Offer One</span>
+              <h3>I will automate your workflows using n8n, Zapier and OpenAI</h3>
+              <div class="price-line">
+                <strong>Starting at [Add starting price]</strong>
+                <span>Delivery: [Add delivery window]</span>
+              </div>
+              <p>Ideal for businesses that need operational automations, alerts, task creation, AI-assisted actions, and clean multi-app workflow execution.</p>
+              <ul class="offer-points">
+                <li><i class="fas fa-check-circle"></i><span>Workflow audit and automation mapping</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Platform setup, triggers, actions, and testing</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Handoff notes for ongoing use</span></li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Request This Offer</a>
+            </div>
+          </article>
+
+          <article class="card offer-card featured" data-reveal>
+            <div class="card-body">
+              <span class="offer-tag">Offer Two</span>
+              <h3>I will build CRM automation for leads, follow-ups and pipelines</h3>
+              <div class="price-line">
+                <strong>Starting at [Add starting price]</strong>
+                <span>Delivery: [Add delivery window]</span>
+              </div>
+              <p>For teams that want cleaner lead flow, better pipeline visibility, automated follow-up actions, and more reliable CRM data movement.</p>
+              <ul class="offer-points">
+                <li><i class="fas fa-check-circle"></i><span>Lead routing, status logic, and task automation</span></li>
+                <li><i class="fas fa-check-circle"></i><span>CRM field updates and notification workflows</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Process tuned for ongoing sales use</span></li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Request This Offer</a>
+            </div>
+          </article>
+
+          <article class="card offer-card" data-reveal>
+            <div class="card-body">
+              <span class="offer-tag">Offer Three</span>
+              <h3>I will create AI-powered automation systems for your business</h3>
+              <div class="price-line">
+                <strong>Starting at [Add starting price]</strong>
+                <span>Delivery: [Add delivery window]</span>
+              </div>
+              <p>Great for AI intake flows, assistant workflows, support routing, structured data capture, and custom AI-enhanced operations.</p>
+              <ul class="offer-points">
+                <li><i class="fas fa-check-circle"></i><span>OpenAI-powered workflow design</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Prompt logic, branching, and downstream integrations</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Testing and optimization for practical business use</span></li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Request This Offer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build automation that removes work and improves how your business runs</h2>
+          <p class="lede">
+            I'm available for freelance projects, business process automation, CRM workflow setup, AI integrations, and custom automation systems.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-layout" data-reveal>
+            <article class="card">
+              <div class="card-body contact-copy">
+                <h3>Tell me what you want to automate</h3>
+                <p class="lede" style="margin-top: 0.85rem;">
+                  If you already know the bottleneck, I can help map the right workflow. If you are still figuring it out, I can help review the process and recommend the best automation path.
+                </p>
+
+                <div class="contact-links icon-links" aria-label="Contact and profile links">
+                  <a class="icon-link" href="mailto:abdullah.s1045g@gmail.com" aria-label="Email Abdullah">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a
+                    class="icon-link"
+                    href="https://www.linkedin.com/in/mabdullah-sultan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn profile"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    class="icon-link"
+                    href="https://github.com/Abdullah-Gujjar9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub profile"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="card" data-reveal>
+            <div class="card-body">
+              <h3>Send project details</h3>
+              <p class="card-subtitle">Share your workflow, tools, and goal. I will review the request and get back to you.</p>
+
+              <form
+                id="contact-form"
+                class="contact-form"
+                action="https://formspree.io/f/mkgzaqkg"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New AI automation portfolio inquiry" />
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@company.com" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="company">Company</label>
+                    <input id="company" name="company" type="text" placeholder="Company or brand" />
+                  </div>
+                  <div class="field">
+                    <label for="project-type">Project Type</label>
+                    <select id="project-type" name="project_type">
+                      <option value="">Select a project type</option>
+                      <option value="workflow-automation">Workflow automation</option>
+                      <option value="crm-automation">CRM automation</option>
+                      <option value="ai-automation">AI automation</option>
+                      <option value="api-integration">API integration</option>
+                      <option value="lead-generation">Lead generation automation</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="message">Project Details</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Describe the workflow, the tools you use, and what you want to automate."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-footer">
+                  <p class="form-note">For direct outreach, email me anytime and include your current tool stack or workflow problem.</p>
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Inquiry
+                  </button>
+                </div>
+
+                <p class="status" id="form-status" role="status" aria-live="polite" hidden></p>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-copy">
+        <strong>Muhammad Abdullah Sultan</strong>
+        <span>AI Automation Expert for business workflows, CRM systems, and practical OpenAI integrations.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.getElementById("site-nav");
+
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      siteNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          siteNav.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
         });
-        return () => typed.destroy();
-      }, []);
+      });
+    }
 
-      return (
-        <section id="home" className="py-16 px-4 max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-          <div className="flex-1" data-aos="fade-up" data-aos-duration="800">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-blue-600 dark:text-blue-300">
-              Hi there — I'm <span className="text-blue-400 dark:text-blue-200">Abdullah</span> Sultan
-            </h1>
-            <p className="text-gray-600 dark:text-gray-200 mt-2">
-              Computer Engineer • <span id="typed"></span> • Networking • Embedded Systems
-            </p>
-            <div className="flex gap-4 mt-4">
-              <a href="#projects" className="btn btn-primary bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-800 dark:to-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                <i className="fas fa-rocket mr-2"></i> Explore Projects
-              </a>
-              <a href="#contact" className="btn btn-secondary border border-blue-600 dark:border-blue-600 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all">
-                <i className="fas fa-paper-plane mr-2"></i> Get In Touch
-              </a>
-            </div>
-            <div className="flex gap-4 mt-4" data-aos="fade-right" data-aos-delay="120">
-              <a href="https://www.linkedin.com/in/mabdullah-sultan" target="_blank" className="w-10 h-10 glass rounded-lg flex items-center justify-center social-icon text-blue-600 dark:text-blue-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white transition-all">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/Abdullah-Gujjar9" target="_blank" className="w-10 h-10 glass rounded-lg flex items-center justify-center social-icon text-blue-600 dark:text-blue-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white transition-all">
-                <i className="fab fa-github"></i>
-              </a>
-              <a href="mailto:abdullah.s1045g@gmail.com" className="w-10 h-10 glass rounded-lg flex items-center justify-center social-icon text-blue-600 dark:text-blue-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white transition-all">
-                <i className="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div className="w-full md:w-2/5" data-aos="zoom-in" data-aos-duration="900">
-            <div className="glass rounded-2xl p-4 shadow-lg hover:-translate-y-2 hover:-rotate-1 transition-all">
-              <img src="./assets/images/myhero.png" alt="Hero Illustration" className="w-full h-auto rounded-lg" loading="lazy" />
-            </div>
-          </div>
-        </section>
-      );
-    };
+    const revealItems = document.querySelectorAll("[data-reveal]");
 
-    // About Component
-    const About = () => (
-      <section id="about" className="py-10 px-4 max-w-6xl mx-auto bg-white dark:bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-          <i className="fas fa-user-alt text-blue-400 dark:text-blue-200"></i> About <strong>Me</strong>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-          <div className="glass rounded-lg p-4 flex flex-col items-center" data-aos="fade-right" data-aos-delay="120">
-            <img src="./assets/images/myphoto.jpg" alt="Profile photo of Muhammad Abdullah Sultan" className="w-56 h-56 object-cover rounded-lg shadow-lg float" loading="lazy" />
-            <div className="text-center mt-4">
-              <h3 className="text-lg font-bold text-blue-600 dark:text-blue-300">Muhammad Abdullah Sultan</h3>
-              <div className="text-blue-400 dark:text-blue-200 font-semibold">Computer Engineer • ML & Networking Specialist</div>
-            </div>
-          </div>
-          <div className="text-gray-600 dark:text-gray-200" data-aos="fade-left" data-aos-delay="160">
-            <p>
-              I graduated from UET Taxila in Computer Engineering and focus on Machine Learning model development, secure network design, and embedded systems. I build production-ready ML pipelines, REST APIs, and interdisciplinary embedded projects (Arduino, sensors).
-            </p>
-            <div className="flex flex-wrap gap-4 mt-4">
-              <div className="glass rounded-lg p-2 flex items-center gap-2">
-                <i className="fas fa-envelope text-blue-400 dark:text-blue-200"></i>
-                <span className="text-sm">abdullah.s1045g@gmail.com</span>
-              </div>
-              <div className="glass rounded-lg p-2 flex items-center gap-2">
-                <i className="fas fa-map-marker-alt text-blue-400 dark:text-blue-200"></i>
-                <span className="text-sm">Pakistan</span>
-              </div>
-              <div className="glass rounded-lg p-2 flex items-center gap-2">
-                <i className="fas fa-graduation-cap text-blue-400 dark:text-blue-200"></i>
-                <span className="text-sm">UET Taxila</span>
-              </div>
-            </div>
-            <div className="flex gap-4 mt-4">
-              <a href="./assets/files/resume.pdf" target="_blank" className="btn btn-primary bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-800 dark:to-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                <i className="fas fa-download mr-2"></i> Download Resume
-              </a>
-              <a href="#projects" className="btn btn-secondary border border-blue-600 dark:border-blue-600 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all">
-                <i className="fas fa-folder-open mr-2"></i> View Work
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-
-    // Skills Component
-    const Skills = () => {
-      const skills = [
-        { icon: "fas fa-code", title: "Programming", description: "Python · JavaScript · HTML/CSS · SQL" },
-        { icon: "fas fa-brain", title: "Machine Learning", description: "TensorFlow · Scikit-learn · Model Deployment · Feature Engineering" },
-        { icon: "fas fa-network-wired", title: "Networking", description: "TCP/IP · VPN · DNS · Subnetting · Wireshark · Network Security" },
-        { icon: "fas fa-robot", title: "Embedded Systems", description: "Arduino · Sensors · Gesture Recognition · Assembly basics" },
-        { icon: "fas fa-tools", title: "Tools & Platforms", description: "Git · Docker · Flask · Linux · Jupyter" },
-        { icon: "fas fa-database", title: "Databases", description: "MongoDB · MySQL · SQLite" },
-      ];
-
-      return (
-        <section id="skills" className="py-10 px-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-          <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-            <i className="fas fa-laptop-code text-blue-400 dark:text-blue-200"></i> Skills & <strong>Abilities</strong>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {skills.map((skill, index) => (
-              <div key={skill.title} className="glass rounded-lg p-4 hover:shadow-lg hover:-translate-y-2 transition-all" data-aos="zoom-in" data-aos-delay={60 + index * 40}>
-                <div className="flex items-center gap-2">
-                  <i className={`${skill.icon} text-blue-400 dark:text-blue-200 text-xl`}></i>
-                  <h4 className="text-blue-600 dark:text-blue-300 font-semibold">{skill.title}</h4>
-                </div>
-                <p className="text-gray-600 dark:text-gray-200 mt-2">{skill.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
-    };
-
-    // Education Component
-    const Education = () => (
-      <section id="education" className="py-10 px-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-          <i className="fas fa-graduation-cap text-blue-400 dark:text-blue-200"></i> Education
-        </h2>
-        <div className="grid grid-cols-1 gap-4 mt-4">
-          <div className="glass rounded-lg p-4 hover:shadow-lg hover:-translate-y-2 transition-all" data-aos="flip-left" data-aos-delay="80">
-            <h3 className="text-blue-600 dark:text-blue-300 font-semibold">Bachelor of Science in Computer Engineering</h3>
-            <p className="text-gray-600 dark:text-gray-200">University of Engineering and Technology, Taxila</p>
-            <p className="text-gray-500 dark:text-gray-300 text-sm">Nov 2021 – May 2025</p>
-          </div>
-        </div>
-      </section>
-    );
-
-    // Projects Component
-    const Projects = () => {
-      const projects = [
-        { icon: "fas fa-bed", title: "Sleep Stage Detection Using EEG", description: "Achieved 87% accuracy in classifying sleep phases using TensorFlow and optimized pipelines for 5,000+ EEG samples." },
-        { icon: "fas fa-seedling", title: "Plant Disease Detection App (FYP)", description: "ML-integrated Flutter app with multiple CNN models and real-time detection. Backend deployed via Flask + Docker." },
-        { icon: "fas fa-car", title: "Multifunctional Robotic Car", description: "Arduino-based vehicle with obstacle avoidance, line-following and gesture recognition using multiple sensors." },
-      ];
-
-      return (
-        <section id="projects" className="py-10 px-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-          <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-            <i className="fas fa-folder-open text-blue-400 dark:text-blue-200"></i> Projects
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {projects.map((project, index) => (
-              <div key={project.title} className="glass rounded-lg p-4 hover:shadow-lg hover:-translate-y-2 transition-all" data-aos="fade-up" data-aos-delay={60 + index * 60}>
-                <div className="flex items-center gap-2">
-                  <i className={`${project.icon} text-blue-600 dark:text-blue-300`}></i>
-                  <h3 className="text-blue-600 dark:text-blue-300 font-semibold">{project.title}</h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-200 mt-2">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
-    };
-
-    // Experience Component
-    const Experience = () => {
-      const experiences = [
-        {
-          title: "Python Programming Intern — A&D Tech Innovations",
-          duration: "Jun 2024 – Aug 2024 | Remote",
-          description: "Built desktop apps using Python & Tkinter, improved efficiency by ~40% and implemented modular OOP patterns for maintainability.",
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
         },
         {
-          title: "Backend Developer Intern — Neuron Tech",
-          duration: "Mar 2024 – Jun 2024 | Remote",
-          description: "Developed full-stack features (React/Node), secured flows with Firebase Auth & Firestore, and worked on LLM data pipelines and tests.",
-        },
-      ];
-
-      return (
-        <section id="experience" className="py-10 px-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-          <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-            <i className="fas fa-briefcase text-blue-400 dark:text-blue-200"></i> Experience
-          </h2>
-          <div className="flex flex-col gap-4 mt-4">
-            {experiences.map((exp, index) => (
-              <div key={exp.title} className="glass rounded-lg p-4 hover:shadow-lg hover:-translate-y-2 transition-all" data-aos="fade-right" data-aos-delay={80 + index * 60}>
-                <h3 className="text-blue-600 dark:text-blue-300 font-semibold">{exp.title}</h3>
-                <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.duration}</p>
-                <p className="text-gray-600 dark:text-gray-200 mt-2">{exp.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+          threshold: 0.14,
+          rootMargin: "0px 0px -40px 0px"
+        }
       );
-    };
 
-    // Contact Component
-    const Contact = () => {
-      const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-      const [message, setMessage] = useState({ text: '', bgColor: '', textColor: '' });
-      const [showMessage, setShowMessage] = useState(false);
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
 
-      const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-      };
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
 
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        setMessage({ text: '⏳ Sending your message...', bgColor: '#e5e7eb', textColor: '#1f2937' });
-        setShowMessage(true);
+    if (contactForm && formStatus) {
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        formStatus.hidden = false;
+        formStatus.dataset.state = "";
+        formStatus.textContent = "Sending your inquiry...";
 
         try {
-          const response = await fetch('https://formspree.io/f/mkgzaqkg', {
-            method: 'POST',
-            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: {
+              Accept: "application/json"
+            }
           });
 
           if (response.ok) {
-            setMessage({ text: '✅ Thanks for contacting! I’ll get back to you soon.', bgColor: '#d4edda', textColor: '#155724' });
-            setFormData({ name: '', email: '', message: '' });
-            setTimeout(() => setShowMessage(false), 4000);
+            contactForm.reset();
+            formStatus.dataset.state = "success";
+            formStatus.textContent = "Thanks for reaching out. I will get back to you soon.";
           } else {
-            setMessage({ text: '❌ Oops! Something went wrong. Please try again.', bgColor: '#f8d7da', textColor: '#721c24' });
+            formStatus.dataset.state = "error";
+            formStatus.textContent = "Something went wrong. Please email me directly instead.";
           }
         } catch (error) {
-          setMessage({ text: `⚠️ Error: ${error.message}`, bgColor: '#fff3cd', textColor: '#856404' });
+          formStatus.dataset.state = "error";
+          formStatus.textContent = "Connection issue. Please email me directly instead.";
         }
-      };
-
-      return (
-        <section id="contact" className="py-10 px-4 max-w-6xl mx-auto bg-white dark:bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-duration="800">
-          <h2 className="text-xl font-bold text-blue-600 dark:text-blue-300 flex items-center gap-2">
-            <i className="fas fa-headset text-blue-400 dark:text-blue-200"></i> Get in <strong>Touch</strong>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-            <div className="glass rounded-lg p-4 flex flex-col gap-4" data-aos="fade-right" data-aos-delay="60">
-              <div className="flex items-center gap-2">
-                <i className="fas fa-envelope text-blue-400 dark:text-blue-200 text-lg"></i>
-                <div>
-                  <h4 className="text-blue-600 dark:text-blue-300 font-semibold">Email</h4>
-                  <a href="mailto:abdullah.s1045g@gmail.com" className="text-gray-600 dark:text-gray-200 text-sm hover:text-blue-600 dark:hover:text-blue-300">abdullah.s1045g@gmail.com</a>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <i className="fab fa-linkedin text-blue-400 dark:text-blue-200 text-lg"></i>
-                <div>
-                  <h4 className="text-blue-600 dark:text-blue-300 font-semibold">LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/mabdullah-sultan" target="_blank" className="text-gray-600 dark:text-gray-200 text-sm hover:text-blue-600 dark:hover:text-blue-300">linkedin.com/in/mabdullah-sultan</a>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <i className="fab fa-github text-blue-400 dark:text-blue-200 text-lg"></i>
-                <div>
-                  <h4 className="text-blue-600 dark:text-blue-300 font-semibold">GitHub</h4>
-                  <a href="https://github.com/Abdullah-Gujjar9" target="_blank" className="text-gray-600 dark:text-gray-200 text-sm hover:text-blue-600 dark:hover:text-blue-300">github.com/Abdullah-Gujjar9</a>
-                </div>
-              </div>
-            </div>
-            <form onSubmit={handleSubmit} className="glass rounded-lg p-4" data-aos="fade-left" data-aos-delay="100">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <label htmlFor="name" className="text-sm text-gray-600 dark:text-gray-200">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                    className="w-full p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-300 transition-all"
-                  />
-                </div>
-                <div className="flex-1">
-                  <label htmlFor="email" className="text-sm text-gray-600 dark:text-gray-200">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your email"
-                    required
-                    className="w-full p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-300 transition-all"
-                  />
-                </div>
-              </div>
-              <div className="mt-4">
-                <label htmlFor="message" className="text-sm text-gray-600 dark:text-gray-200">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="6"
-                  placeholder="Describe your message..."
-                  required
-                  className="w-full p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-300 transition-all resize-vertical"
-                ></textarea>
-              </div>
-              <div className="flex gap-4 mt-4">
-                <button type="submit" className="btn btn-primary bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-800 dark:to-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                  <i className="fas fa-paper-plane mr-2"></i> Send Message
-                </button>
-                <button type="reset" onClick={() => setFormData({ name: '', email: '', message: '' })} className="btn btn-secondary border border-blue-600 dark:border-blue-600 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all">
-                  Reset
-                </button>
-              </div>
-              {showMessage && (
-                <div className="mt-4 p-2 rounded-lg transition-opacity duration-600" style={{ background: message.bgColor, color: message.textColor, opacity: showMessage ? 1 : 0 }}>
-                  {message.text}
-                </div>
-              )}
-            </form>
-          </div>
-        </section>
-      );
-    };
-
-    // Footer Component
-    const Footer = () => (
-      <footer className="py-10 px-4 max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-sm">© {new Date().getFullYear()} Muhammad Abdullah Sultan</p>
-      </footer>
-    );
-
-    // Main App Component
-    const App = () => {
-      useEffect(() => {
-        AOS.init({ once: true, duration: 700, easing: 'cubic-bezier(.2,.8,.2,1)' });
-      }, []);
-
-      return (
-        <div>
-          <Navbar />
-          <main>
-            <Hero />
-            <About />
-            <Skills />
-            <Education />
-            <Projects />
-            <Experience />
-            <Contact />
-          </main>
-          <Footer />
-        </div>
-      );
-    };
-
-    // Render the App
-    ReactDOM.render(<App />, document.getElementById('root'));
+      });
+    }
   </script>
-  <script>
-  // Disable right click
-  document.addEventListener('contextmenu', event => event.preventDefault());
-
-  // Disable common inspect shortcuts
-  document.onkeydown = function(e) {
-    if (e.keyCode == 123) { // F12
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) {
-      return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
-      return false;
-    }
-  }
-</script>
-
 </body>
 </html>
