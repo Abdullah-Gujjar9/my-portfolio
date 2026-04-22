@@ -245,27 +245,20 @@
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.42rem 0.82rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
+      display: inline-block;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #111111;
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
-      content: "";
-      width: 0.45rem;
-      height: 0.45rem;
-      border-radius: var(--radius-sm);
-      background: currentColor;
-      box-shadow: 0 0 18px currentColor;
+      content: none;
+      display: none;
     }
 
     h1,
@@ -281,7 +274,7 @@
       font-size: clamp(1.9rem, 4vw, 3.35rem);
       line-height: 1.04;
       max-width: 14.5ch;
-      margin-top: 0.8rem;
+      margin-top: 0;
     }
 
     h2 {
@@ -517,10 +510,16 @@
       letter-spacing: -0.02em;
     }
 
-    .about-grid,
-    .contact-grid {
+    .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+      gap: 1.4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 880px);
+      justify-content: center;
       gap: 1.4rem;
     }
 
@@ -682,28 +681,43 @@
 
     .case-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.2rem;
     }
 
     .case-card .card-body {
       display: grid;
-      gap: 1rem;
+      grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+      gap: 1.35rem;
       height: 100%;
+      align-items: start;
     }
 
     .case-visual {
-      min-height: 12.25rem;
+      min-height: 100%;
       border-radius: var(--radius-md);
-      border: 1px dashed rgba(28, 123, 255, 0.22);
+      border: 1px solid rgba(28, 123, 255, 0.12);
       background:
         radial-gradient(circle at top right, rgba(61, 141, 255, 0.18), transparent 11rem),
         linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(235, 244, 255, 0.75));
-      padding: 1rem;
-      display: flex;
-      align-items: flex-end;
-      color: var(--muted);
-      font-size: 0.85rem;
+      padding: 0.85rem;
+      overflow: hidden;
+    }
+
+    .case-visual img,
+    .case-visual video {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .case-content {
+      display: grid;
+      gap: 0.95rem;
+      min-width: 0;
     }
 
     .case-category {
@@ -727,6 +741,19 @@
 
     .case-tools {
       gap: 0.55rem;
+    }
+
+    .case-role {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .case-role i {
+      color: var(--primary-strong);
     }
 
     .case-outcome {
@@ -932,14 +959,8 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 1rem;
-    }
-
-    .form-note {
-      color: var(--muted);
-      font-size: 0.9rem;
-      max-width: 18rem;
     }
 
     .status {
@@ -1018,10 +1039,6 @@
       .testimonial-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
-      .case-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
     }
 
     @media (max-width: 920px) {
@@ -1081,6 +1098,10 @@
       .process-grid,
       .offer-grid,
       .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-card .card-body {
         grid-template-columns: 1fr;
       }
 
@@ -1161,7 +1182,7 @@
     <div class="container nav-shell">
       <a class="brand" href="#top" aria-label="Go to homepage">
         <span class="brand-mark">
-          <img src="./assets/images/myphoto.jpg" alt="Portrait of Muhammad Abdullah Sultan" loading="eager" />
+          <img src="./assets/images/myhero.png" alt="Muhammad Abdullah Sultan brand image" loading="eager" />
         </span>
         <span class="brand-copy">
           <strong>Muhammad Abdullah Sultan</strong>
@@ -1184,7 +1205,6 @@
         <a href="#services">Services</a>
         <a href="#stack">Tech Stack</a>
         <a href="#case-studies">Case Studies</a>
-        <a href="#offers">Offers</a>
         <a href="#contact" class="nav-cta">Book a Call</a>
       </nav>
     </div>
@@ -1194,7 +1214,6 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy" data-reveal>
-          <span class="eyebrow">AI Automation Consultant</span>
           <h1>I build <span class="accent-text">AI-powered automation systems</span> that save time and scale operations.</h1>
           <p class="lede">
             I help businesses automate repetitive work, connect the tools they already use, and build reliable AI-assisted workflows using n8n, Zapier, Make.com, OpenAI, CRMs, APIs, webhooks, and lightweight custom scripting.
@@ -1276,10 +1295,6 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">About</span>
-          <h2>Automation systems built around real business workflows</h2>
-          <p class="lede">
-            I work with businesses that want fewer manual handoffs, cleaner operations, and more reliable workflows across the tools they already use.
-          </p>
         </div>
 
         <div class="about-grid">
@@ -1348,10 +1363,6 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Services</span>
-          <h2>Automation services designed for sales, operations, and client workflows</h2>
-          <p class="lede">
-            Whether you need a single high-impact automation or a more complete AI-enabled system, the goal is the same: make work move faster with fewer manual steps.
-          </p>
         </div>
 
         <div class="grid-3">
@@ -1410,10 +1421,6 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Tech Stack</span>
-          <h2>The platforms and tools behind scalable automations</h2>
-          <p class="lede">
-            I use the right stack for the workflow: fast no-code execution when it fits, direct integrations and custom logic when the process needs more control.
-          </p>
         </div>
 
         <div class="tool-groups">
@@ -1479,112 +1486,179 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Case Studies</span>
-          <h2>Project layouts inspired by real client automation work</h2>
-          <p class="lede">
-            These showcase the types of systems I build for businesses. Real screenshots, diagrams, and metrics can be inserted later where placeholders are noted.
-          </p>
+          <h2>Real automation projects built for business workflows</h2>
         </div>
 
         <div class="case-grid">
           <article class="card case-card" data-reveal>
             <div class="card-body">
-              <div class="case-visual">Placeholder: add workflow screenshot or operations dashboard visual.</div>
-              <span class="case-category">Operations Automation</span>
-              <h3>AI Workflow Automation for Operations</h3>
-              <p>Built a central workflow to collect requests, classify urgency with AI, create tasks, and notify the right team channel without manual triage.</p>
-              <div class="case-tools">
-                <span class="chip">n8n</span>
-                <span class="chip">OpenAI API</span>
-                <span class="chip">Slack</span>
-                <span class="chip">Notion</span>
+              <div class="case-visual">
+                <img
+                  src="./assets/images/AI Powered CRM Lead Management and Automation.png"
+                  alt="AI Powered CRM Lead Management and Automation project preview"
+                  loading="lazy"
+                />
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Less manual sorting, faster handoffs, and more consistent operational execution.</p>
-              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
+              <div class="case-content">
+                <span class="case-category">CRM Automation</span>
+                <h3>AI Powered CRM Lead Management and Automation</h3>
+                <div class="case-role">
+                  <i class="fas fa-user-gear"></i>
+                  <span>My role: CRM Automation &amp; AI Workflow Developer</span>
+                </div>
+                <p>
+                  Developed an AI-driven lead management system integrating website forms, chatbots, emails, and Slack.
+                  Automated lead enrichment, AI-based lead scoring, and CRM record updates.
+                </p>
+                <p>
+                  Implemented analytics tracking, automated task creation, and follow-up email sequences to deliver a scalable CRM automation system that improves lead quality, speeds up response times, and enhances sales team efficiency.
+                </p>
+                <div class="case-tools">
+                  <span class="chip">CRM Automation</span>
+                  <span class="chip">Chatbot Integration</span>
+                  <span class="chip">Automated Workflow</span>
+                  <span class="chip">Data Analytics</span>
+                  <span class="chip">CRM Development</span>
+                </div>
+                <p class="case-outcome"><strong>Business outcome:</strong> Higher-quality lead handling, faster follow-up, cleaner CRM data, and a more efficient sales workflow.</p>
+                <a class="inline-link" href="#contact">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <article class="card case-card" data-reveal>
             <div class="card-body">
-              <div class="case-visual">Placeholder: add CRM pipeline screenshot and lead flow diagram.</div>
-              <span class="case-category">CRM Automation</span>
-              <h3>CRM Pipeline and Lead Follow-Up Automation</h3>
-              <p>Created lead capture, assignment, follow-up reminders, and pipeline stage updates so sales teams could respond faster and keep deals moving.</p>
-              <div class="case-tools">
-                <span class="chip">HubSpot</span>
-                <span class="chip">Zapier</span>
-                <span class="chip">Gmail</span>
-                <span class="chip">Google Sheets</span>
+              <div class="case-visual">
+                <img
+                  src="./assets/images/AI Chatbot with Multi Channel Messaging and Vector DB Search.png"
+                  alt="AI Chatbot with Multi Channel Messaging and Vector DB Search project preview"
+                  loading="lazy"
+                />
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Cleaner pipeline visibility and fewer missed leads due to delayed manual follow-up.</p>
-              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
+              <div class="case-content">
+                <span class="case-category">AI Chatbot</span>
+                <h3>AI Chatbot with Multi Channel Messaging and Vector DB Search</h3>
+                <div class="case-role">
+                  <i class="fas fa-user-gear"></i>
+                  <span>My role: AI Automation &amp; Chatbot Developer</span>
+                </div>
+                <p>
+                  Built an AI-powered multi channel chatbot integrating Webchat, Facebook Messenger, and Email with OpenAI GPT for intelligent responses.
+                </p>
+                <p>
+                  Implemented Vector Database Search for knowledge base queries, automated message preprocessing, and real-time AI message generation to deliver a scalable, omnichannel conversational system for instant and accurate customer support.
+                </p>
+                <div class="case-tools">
+                  <span class="chip">Email Automation</span>
+                  <span class="chip">Chatbot Development</span>
+                  <span class="chip">OpenAPI</span>
+                  <span class="chip">Automation</span>
+                  <span class="chip">AI Chatbot</span>
+                </div>
+                <p class="case-outcome"><strong>Business outcome:</strong> Faster multi-platform support, more accurate answers, and a scalable chatbot workflow across customer channels.</p>
+                <a class="inline-link" href="#contact">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <article class="card case-card" data-reveal>
             <div class="card-body">
-              <div class="case-visual">Placeholder: add AI support workflow screenshot or conversation flow.</div>
-              <span class="case-category">AI Support Workflow</span>
-              <h3>OpenAI-Powered Customer Support Workflow</h3>
-              <p>Used AI to classify messages, draft first-response suggestions, and route complex issues into the right queue with context already attached.</p>
-              <div class="case-tools">
-                <span class="chip">Make.com</span>
-                <span class="chip">OpenAI API</span>
-                <span class="chip">Slack</span>
-                <span class="chip">Google Sheets</span>
+              <div class="case-visual">
+                <img
+                  src="./assets/images/Make.com AI Workflow Automation with OpenAI & Multi Channel Messaging.png"
+                  alt="Make.com AI Workflow Automation with OpenAI and Multi Channel Messaging project preview"
+                  loading="lazy"
+                />
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Faster internal response handling and better consistency for repetitive support requests.</p>
-              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
+              <div class="case-content">
+                <span class="case-category">Make.com Automation</span>
+                <h3>Make.com AI Workflow Automation with OpenAI &amp; Multi Channel Messaging</h3>
+                <div class="case-role">
+                  <i class="fas fa-user-gear"></i>
+                  <span>My role: Automation Workflow &amp; AI Integration Specialist</span>
+                </div>
+                <p>
+                  Built an AI-powered automation workflow in Make.com integrating Webchat, Email, Helpdesk, and Knowledge Base with OpenAI GPT for intelligent responses.
+                </p>
+                <p>
+                  Automated communication via WhatsApp, Microsoft Teams, and Email, creating a scalable multi-channel AI system that improves customer service speed, response accuracy, and internal collaboration.
+                </p>
+                <div class="case-tools">
+                  <span class="chip">Make.com</span>
+                  <span class="chip">ChatGPT API Integration</span>
+                  <span class="chip">WhatsApp</span>
+                  <span class="chip">API Integration</span>
+                  <span class="chip">API Development</span>
+                </div>
+                <p class="case-outcome"><strong>Business outcome:</strong> Faster support delivery, stronger collaboration, and more consistent customer communication across channels.</p>
+                <a class="inline-link" href="#contact">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <article class="card case-card" data-reveal>
             <div class="card-body">
-              <div class="case-visual">Placeholder: add outreach dashboard, sequence, or qualification logic visual.</div>
-              <span class="case-category">Sales Automation</span>
-              <h3>Sales Outreach and Lead Qualification System</h3>
-              <p>Connected inbound and outbound lead sources with qualification logic, enrichment steps, and routing rules for a cleaner sales handoff.</p>
-              <div class="case-tools">
-                <span class="chip">Pipedrive</span>
-                <span class="chip">Zapier</span>
-                <span class="chip">OpenAI API</span>
-                <span class="chip">Webhooks</span>
+              <div class="case-visual">
+                <video
+                  src="./assets/images/AI Powered Email Responder by n8n, Outlook, & OpenAI.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  controls
+                ></video>
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Less manual qualification work and faster response time on higher-intent leads.</p>
-              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
+              <div class="case-content">
+                <span class="case-category">Email Automation</span>
+                <h3>AI Powered Email Responder by n8n, Outlook, &amp; OpenAI</h3>
+                <div class="case-role">
+                  <i class="fas fa-user-gear"></i>
+                  <span>My role: Automation &amp; AI Workflow Developer</span>
+                </div>
+                <p>
+                  Developed an AI-powered email automation system using Microsoft Outlook, n8n, and OpenAI to automatically classify and respond to incoming emails.
+                </p>
+                <p>
+                  The workflow identifies messages as Sales or Customer Support through AI-based text classification, then generates and sends context-aware replies in real time to reduce manual workload and improve communication consistency.
+                </p>
+                <div class="case-tools">
+                  <span class="chip">n8n</span>
+                  <span class="chip">AI Chatbot</span>
+                  <span class="chip">Email Automation</span>
+                  <span class="chip">NLP Tokenization</span>
+                  <span class="chip">API Integration</span>
+                </div>
+                <p class="case-outcome"><strong>Business outcome:</strong> Faster professional replies, lower manual email handling, and more productive support and sales communication.</p>
+                <a class="inline-link" href="#contact">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <article class="card case-card" data-reveal>
             <div class="card-body">
-              <div class="case-visual">Placeholder: add system map or API request flow screenshot.</div>
-              <span class="case-category">API Integration</span>
-              <h3>API and Webhook Integration Dashboard</h3>
-              <p>Connected tools that did not natively integrate by building webhook triggers, JSON mapping, and custom error-handling steps for stable data movement.</p>
-              <div class="case-tools">
-                <span class="chip">APIs</span>
-                <span class="chip">Webhooks</span>
-                <span class="chip">Python</span>
-                <span class="chip">JSON</span>
+              <div class="case-visual">
+                <img
+                  src="./assets/images/GPT powered chatbot.png"
+                  alt="GPT powered chatbot project preview"
+                  loading="lazy"
+                />
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Reliable cross-tool sync and fewer manual data fixes across disconnected systems.</p>
-              <a class="inline-link" href="#contact">View Case Study <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
-
-          <article class="card case-card" data-reveal>
-            <div class="card-body">
-              <div class="case-visual">Placeholder: add intake flow, AI voice agent, or call summary visual.</div>
-              <span class="case-category">Smart Intake</span>
-              <h3>AI Voice Agent and Smart Intake Workflow</h3>
-              <p>Designed an intake flow that captures inquiries, structures notes, enriches the submission, and pushes clean data into the next step automatically.</p>
-              <div class="case-tools">
-                <span class="chip">OpenAI API</span>
-                <span class="chip">Make.com</span>
-                <span class="chip">CRM</span>
-                <span class="chip">Webhooks</span>
+              <div class="case-content">
+                <span class="case-category">GPT Chatbot</span>
+                <h3>GPT powered chatbot</h3>
+                <p>
+                  Created a high performing chatbot for the Vulcan Forged crypto gaming project, focused on strong conversational quality and reliable user interaction.
+                </p>
+                <div class="case-tools">
+                  <span class="chip">GPT-4</span>
+                  <span class="chip">Python</span>
+                  <span class="chip">API</span>
+                  <span class="chip">Natural Language Processing</span>
+                  <span class="chip">Chatbot</span>
+                </div>
+                <p class="case-outcome"><strong>Business outcome:</strong> More engaging chatbot interactions and a stronger AI-driven support experience for the platform.</p>
+                <a class="inline-link" href="#contact">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
               </div>
-              <p class="case-outcome"><strong>Business outcome:</strong> Faster intake processing, cleaner records, and less administrative effort after each inquiry.</p>
-              <a class="inline-link" href="#contact">See Details <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
         </div>
@@ -1595,10 +1669,6 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Why Choose Me</span>
-          <h2>A practical automation partner for business workflows</h2>
-          <p class="lede">
-            The work is not just about connecting tools. It is about building automation that is clear, maintainable, and worth relying on when your business grows.
-          </p>
         </div>
 
         <div class="trust-grid">
@@ -1657,10 +1727,6 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Process</span>
-          <h2>A simple process for turning workflow problems into working systems</h2>
-          <p class="lede">
-            The build stays focused on clarity: understand the workflow, map the system, implement carefully, test thoroughly, then support adoption.
-          </p>
         </div>
 
         <div class="process-grid">
@@ -1707,169 +1773,15 @@
       </div>
     </section>
 
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow">Testimonials</span>
-          <h2>Built to showcase real client feedback when available</h2>
-          <p class="lede">
-            This section is ready for Upwork reviews, direct client endorsements, or agency partner feedback once you have final approved quotes.
-          </p>
-        </div>
-
-        <div class="testimonial-grid">
-          <article class="card testimonial-card" data-reveal>
-            <div class="card-body">
-              <blockquote>[Replace with real client testimonial]</blockquote>
-              <div class="testimonial-meta">
-                <strong>Client Name Placeholder</strong>
-                <span>Company / role / project type</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card testimonial-card" data-reveal>
-            <div class="card-body">
-              <blockquote>[Replace with real client testimonial]</blockquote>
-              <div class="testimonial-meta">
-                <strong>Client Name Placeholder</strong>
-                <span>Business process automation project</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card testimonial-card" data-reveal>
-            <div class="card-body">
-              <blockquote>[Replace with real client testimonial]</blockquote>
-              <div class="testimonial-meta">
-                <strong>Client Name Placeholder</strong>
-                <span>CRM automation or AI integration engagement</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="offers">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow">Project Catalog</span>
-          <h2>Conversion-focused offers inspired by service listings and project catalog pages</h2>
-          <p class="lede">
-            These can be linked from outreach, Upwork, or your social profiles and later updated with exact pricing, delivery windows, and scope limits.
-          </p>
-        </div>
-
-        <div class="offer-grid">
-          <article class="card offer-card" data-reveal>
-            <div class="card-body">
-              <span class="offer-tag">Offer One</span>
-              <h3>I will automate your workflows using n8n, Zapier and OpenAI</h3>
-              <div class="price-line">
-                <strong>Starting at [Add starting price]</strong>
-                <span>Delivery: [Add delivery window]</span>
-              </div>
-              <p>Ideal for businesses that need operational automations, alerts, task creation, AI-assisted actions, and clean multi-app workflow execution.</p>
-              <ul class="offer-points">
-                <li><i class="fas fa-check-circle"></i><span>Workflow audit and automation mapping</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Platform setup, triggers, actions, and testing</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Handoff notes for ongoing use</span></li>
-              </ul>
-              <a class="btn btn-secondary" href="#contact">Request This Offer</a>
-            </div>
-          </article>
-
-          <article class="card offer-card featured" data-reveal>
-            <div class="card-body">
-              <span class="offer-tag">Offer Two</span>
-              <h3>I will build CRM automation for leads, follow-ups and pipelines</h3>
-              <div class="price-line">
-                <strong>Starting at [Add starting price]</strong>
-                <span>Delivery: [Add delivery window]</span>
-              </div>
-              <p>For teams that want cleaner lead flow, better pipeline visibility, automated follow-up actions, and more reliable CRM data movement.</p>
-              <ul class="offer-points">
-                <li><i class="fas fa-check-circle"></i><span>Lead routing, status logic, and task automation</span></li>
-                <li><i class="fas fa-check-circle"></i><span>CRM field updates and notification workflows</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Process tuned for ongoing sales use</span></li>
-              </ul>
-              <a class="btn btn-primary" href="#contact">Request This Offer</a>
-            </div>
-          </article>
-
-          <article class="card offer-card" data-reveal>
-            <div class="card-body">
-              <span class="offer-tag">Offer Three</span>
-              <h3>I will create AI-powered automation systems for your business</h3>
-              <div class="price-line">
-                <strong>Starting at [Add starting price]</strong>
-                <span>Delivery: [Add delivery window]</span>
-              </div>
-              <p>Great for AI intake flows, assistant workflows, support routing, structured data capture, and custom AI-enhanced operations.</p>
-              <ul class="offer-points">
-                <li><i class="fas fa-check-circle"></i><span>OpenAI-powered workflow design</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Prompt logic, branching, and downstream integrations</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Testing and optimization for practical business use</span></li>
-              </ul>
-              <a class="btn btn-secondary" href="#contact">Request This Offer</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Contact</span>
-          <h2>Let's build automation that removes work and improves how your business runs</h2>
-          <p class="lede">
-            I'm available for freelance projects, business process automation, CRM workflow setup, AI integrations, and custom automation systems.
-          </p>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-layout" data-reveal>
-            <article class="card">
-              <div class="card-body contact-copy">
-                <h3>Tell me what you want to automate</h3>
-                <p class="lede" style="margin-top: 0.85rem;">
-                  If you already know the bottleneck, I can help map the right workflow. If you are still figuring it out, I can help review the process and recommend the best automation path.
-                </p>
-
-                <div class="contact-links icon-links" aria-label="Contact and profile links">
-                  <a class="icon-link" href="mailto:abdullah.s1045g@gmail.com" aria-label="Email Abdullah">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                  <a
-                    class="icon-link"
-                    href="https://www.linkedin.com/in/mabdullah-sultan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn profile"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    class="icon-link"
-                    href="https://github.com/Abdullah-Gujjar9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub profile"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
           <article class="card" data-reveal>
             <div class="card-body">
-              <h3>Send project details</h3>
-              <p class="card-subtitle">Share your workflow, tools, and goal. I will review the request and get back to you.</p>
-
               <form
                 id="contact-form"
                 class="contact-form"
@@ -1918,7 +1830,6 @@
                 </div>
 
                 <div class="form-footer">
-                  <p class="form-note">For direct outreach, email me anytime and include your current tool stack or workflow problem.</p>
                   <button class="btn btn-primary" type="submit">
                     <i class="fas fa-paper-plane"></i>
                     Send Inquiry
@@ -1943,7 +1854,6 @@
       <div class="footer-links">
         <a href="#services">Services</a>
         <a href="#case-studies">Case Studies</a>
-        <a href="#offers">Offers</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -2027,3 +1937,4 @@
   </script>
 </body>
 </html>
+
